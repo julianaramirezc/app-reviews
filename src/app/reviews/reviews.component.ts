@@ -7,11 +7,22 @@ import { DataService } from './data.service';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.css']
 })
+
 export class ReviewsComponent implements OnInit {
   public response: ServiceResponse;
   
   constructor(private dataService: DataService) { }
 
+   /**
+  * 
+  *
+  * @remarks
+  *  This method get the data of the method getReviews()
+  
+  *
+  *
+  * 
+  */
   ngOnInit() {
     let reviewResult = this.dataService.getReviews().subscribe(data => 
       {

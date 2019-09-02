@@ -20,17 +20,29 @@ export class ReviewDetailComponent implements OnInit {
     private service: DataService
   ) { }
 
+   /**
+  * 
+  * @remarks
+  *  This method get the review of details
+  *
+  * 
+  */
+
   ngOnInit() {
     this.detail$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) =>
         this.service.getReview((params.get('name')))
     ));
   }
-
+  
+   /**
+  * 
+  *
+  * @remarks
+  *  This go back of route navigate
+  */
   gotoReviews() {
-    //let heroId = hero ? hero.id : null;
-    
-    this.router.navigate(['']);
+   this.router.navigate(['']);
   }
 
   
