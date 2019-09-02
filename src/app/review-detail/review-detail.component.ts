@@ -23,7 +23,7 @@ export class ReviewDetailComponent implements OnInit {
    /**
   * 
   * @remarks
-  *  This method get the review of details
+  *  This method in called in the OnInit event and configures the model getting a review by name
   *
   * 
   */
@@ -39,7 +39,7 @@ export class ReviewDetailComponent implements OnInit {
   * 
   *
   * @remarks
-  *  This go back of route navigate
+  *  This goes back of route navigate
   */
   gotoReviews() {
    this.router.navigate(['']);
