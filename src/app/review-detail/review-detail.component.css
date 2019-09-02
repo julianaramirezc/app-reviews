@@ -1,0 +1,14 @@
+.button{
+    width: 80px;
+    border: 2px solid;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.section_details{
+    background-color: #03A9F4;
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    font-family: cursive;
+}
