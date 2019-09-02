@@ -1,20 +1,20 @@
-<section class="section_details">
-  <h2>Details Review</h2>
-  
-    <ul *ngIf="detail$ | async as detail">
-      <li>Display Title: "{{ detail.display_title }}"</li>
-      <li>Rating: "{{ detail.mpaa_rating }}"</li>
-      <li>Critics: "{{ detail.critics_pick }}"</li>
-      <li>Byline: "{{ detail.byline }}"</li>
-      <li>Headline: "{{ detail.headline }}"</li>
-      <li>Summary: "{{ detail.summary_short }}"</li>
-      <li>Publication Date: "{{ detail.publication_date }}"</li>
-      <li>Opening Date: "{{ detail.opening_date }}"</li>
-      <li>Date updated: "{{ detail.date_updated }}"</li>
-      <li>Link: "{{ detail.link.type }}"</li>
-      <li>Url: "{{ detail.link.url }}"</li>
-      <li>Suggested link test: "{{ detail.link.suggested_link_text }}"</li>
-      <li>Multimedia type: "{{ detail.multimedia.type }}"</li>
+<section *ngIf="detail$ | async as detail" class="section_details">
+  <h1>Details Review</h1>
+  <img [src]="detail.multimedia.src" class="movie_poster">
+    <ul>
+      <li>Display Title: {{ detail.display_title }}</li>
+      <li>Rating: {{ detail.mpaa_rating }}</li>
+      <li>Critics: {{ detail.critics_pick }}</li>
+      <li>Byline: {{ detail.byline }}</li>
+      <li>Headline: {{ detail.headline }}</li>
+      <li>Summary: {{ detail.summary_short }}</li>
+      <li>Publication Date: {{ detail.publication_date }}</li>
+      <li>Opening Date: {{ detail.opening_date }}</li>
+      <li>Date updated: {{ detail.date_updated }}</li>
+      <li>Link: {{ detail.link.type }}</li>
+      <li>Url: <a href="{{ detail.link.url }}" target="_blank">{{ detail.link.url }}</a></li>
+      <!-- <li>Suggested link test: {{ detail.link.suggested_link_text }}</li>
+      <li>Multimedia type: {{ detail.multimedia.type }}</li> -->
     </ul>
   
 

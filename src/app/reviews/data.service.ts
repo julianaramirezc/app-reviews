@@ -26,25 +26,10 @@ export class DataService {
     }
 
     getReview(name : string){
-        return this.reviews.pipe(
-            map(serviceResult => serviceResult.results.find(
-                review => review.display_title == name)
-                ));
+      this.getReviews();
+      return this.reviews.pipe(
+          map(serviceResult => serviceResult.results.find(
+              review => review.display_title == name)
+              ));
     }
- 
-  // Error handling 
-  handleError(error) {
-     let errorMessage = '';
-     if(error.error instanceof ErrorEvent) {
-       // Get client-side error
-       errorMessage = error.error.message;
-     } else {
-       // Get server-side error
-       errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
-     }
-     window.alert(errorMessage);
-     return throwError(errorMessage);
-  }
-
-
 }

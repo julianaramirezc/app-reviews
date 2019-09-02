@@ -1,9 +1,7 @@
 <a [routerLink]="['/detail', reviewCard.display_title]" routerLinkActive="active" class="box-click">
-    <div style="background-color: white" class="">
         <img [src]="reviewCard.multimedia.src">
 
         <h2 class="center_text">{{reviewCard.display_title}}</h2>
         <p class="center_text">{{reviewCard.summary_short}}</p>
         <div class="box_detail">More details</div>
-    </div>
 </a>
