@@ -1,0 +1,9 @@
+<main>
+    <h1 class="title">Reviews</h1>
+    <ul *ngIf="response" class="container">
+          <li *ngFor="let review of response.results" class="item">
+                <app-review-card [reviewCard]="review"></app-review-card>
+          </li>
+
+    </ul>
+</main>

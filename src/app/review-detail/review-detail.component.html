@@ -1,0 +1,21 @@
+<h2>Details</h2>
+<div *ngIf="detail$ | async as detail">
+  <h3>Display Title: "{{ detail.display_title }}"</h3>
+  <h3>Rating: "{{ detail.mpaa_rating }}"</h3>
+  <h3>Critics: "{{ detail.critics_pick }}"</h3>
+  <h3>Byline: "{{ detail.byline }}"</h3>
+  <h3>Headline: "{{ detail.headline }}"</h3>
+  <h3>Summary: "{{ detail.summary_short }}"</h3>
+  <h3>Publication Date: "{{ detail.publication_date }}"</h3>
+  <h3>Opening Date: "{{ detail.opening_date }}"</h3>
+  <h3>Date updated: "{{ detail.date_updated }}"</h3>
+  <h3>Link: "{{ detail.link.type }}"</h3>
+  <h3>Url: "{{ detail.link.url }}"</h3>
+  <h3>Suggested link test: "{{ detail.link.suggested_link_text }}"</h3>
+  <h3>Multimedia type: "{{ detail.multimedia.type }}"</h3>
+  <h3>Src: "{{ detail.multimedia.src }}"</h3>
+  <h3>Width: "{{ detail.multimedia.width }}"</h3>
+  <h3>Height: "{{ detail.multimedia.height }}"</h3>
+</div>
+
+<button (click)="gotoReviews()">Back</button>

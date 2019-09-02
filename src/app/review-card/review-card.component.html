@@ -1,0 +1,10 @@
+<ul class="item">
+    <img [src]="reviewMultimedia.src">
+    <li>Display title: {{reviewCard.display_title}}</li>
+    <li>Critics Picks: {{reviewCard.critics_pick}}</li>
+    <li><a [routerLink]="['/detail', reviewCard.display_title]" routerLinkActive="active" class="box-click" >
+            More details 
+        </a>
+    </li>
+</ul>
+
