@@ -14,6 +14,6 @@ export class ReviewCardComponent implements OnInit {
   @Input() reviewMultimedia : ReviewMultimedia;
 
   ngOnInit() {
-  }
+  } 
 
 }
